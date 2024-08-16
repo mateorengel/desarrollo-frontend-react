@@ -5,11 +5,13 @@ import Logo from './_components/Logo';
 
 import OpenLink from '../components/OpenLink';
 import Lessoninfo from './_components/Lessoninfo';
+import Contador from './_components/Contador';
 
 const Default = () => {
     return (
         <>
             <header className="App-header">
+                <Contador/>
                 <Logo />
                 <Description />
                 <OpenLink 
@@ -29,6 +31,7 @@ const Default = () => {
                     number="2" 
                     title="Context API para la gestión del estado global en aplicaciones react"
                 />
+                
 
                 {/* <Content />
                 <GitHub /> */}

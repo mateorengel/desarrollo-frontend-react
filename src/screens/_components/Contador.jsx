@@ -6,7 +6,7 @@ const Contador =()=>{
     const [contador, setContador]=useState(0);
 
     const handleContador=()=>{
-        setContador(contador+1);
+        setContador(contador+1 );
     };
 
     const handleContador2=()=>{

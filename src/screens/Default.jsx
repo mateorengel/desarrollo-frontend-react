@@ -1,12 +1,12 @@
-import Description from './_components/Description';
-import Logo from './_components/Logo';
+import Description from './Default/_components/Description';
+import Logo from './Default/_components/Logo';
 //import Content from "../components/Content";
 //import GitHub from "../components/GitHub";
 
 import OpenLink from '../components/OpenLink';
-import Lessoninfo from './_components/Lessoninfo';
-import Contador from './_components/Contador';
-import App from './_components/practica1';
+import Lessoninfo from './Default/_components/Lessoninfo';
+import Contador from './Default/_components/Contador';
+import App from './Default/_components/practica1';
 
 const Default = () => {
     return (
@@ -32,7 +32,7 @@ const Default = () => {
                     number="2" 
                     title="Context API para la gestión del estado global en aplicaciones react"
                 />
-                <App/>
+                {/* <App/> */}
 
              
                 

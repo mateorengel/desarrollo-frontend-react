@@ -3,7 +3,7 @@ import {useEffect} from "react";
 import {setProducts} from "../../../redux/products/productsActions";
 
 const Home = () => {
-    const product = useSelector((state) => state.product);
+    const product = useSelector((state) => state.products);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -22,7 +22,7 @@ const Home = () => {
     return (
         <>
             <h1>PRODUCTOS</h1>
-            {/* <h5>{JSON.stringify(product.PRODUCTS)}</h5> */}
+            <h5>{JSON.stringify(product.PRODUCTS)}</h5>
         </>
     );
 };

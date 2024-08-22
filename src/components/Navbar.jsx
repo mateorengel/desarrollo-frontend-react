@@ -9,7 +9,7 @@ const Navbar =()=>{
                 </li>
             
                 <li>
-                    <Link to="/default">Default</Link>
+                    <Link to="/default">Defaults</Link>
                 </li>
            
                 <li>

@@ -1,9 +1,48 @@
+import useForm from "../../hooks/useForm";
+import { useSelector , useDispatch} from "react-redux";
+import { saveFormData } from "../../redux/form/formActions";
+
 const Login = () => {
+    const [values,handleChange]=useForm({username:'',email:''});
+    const form=useSelector(state=>state.form);//recupera las variables de estado de form del reducer
+    const dispatch=useDispatch();
+
+    const handleSubmit=(event)=>{
+        event.preventDefault();
+        console.log(values);
+        dispatch(saveFormData(values));
+    }
     return (
-        <>
-            <h5>Login</h5>
-            <p>Esta pantalla es de login</p>
-        </>
+        <div>
+            <form onSubmit={handleSubmit}>
+                <h5>Username: {form.formData.username}</h5>
+                <h5>Email: {form.formData.email}</h5>
+
+                <div>
+                    <label htmlFor="username">Username</label>
+                    <input 
+                        type="text" 
+                        id="username"
+                        name="username"
+                        value={values.username}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label htmlFor="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email"
+                        name="email"
+                        value={values.email}
+                        onChange={handleChange}
+                    />
+                </div>
+                
+                <button type="submit">Submit</button>
+                
+            </form>
+        </div>
     );
 };
 

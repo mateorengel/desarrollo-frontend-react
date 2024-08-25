@@ -12,12 +12,19 @@ const useForm =(initialValues)=>{
                 ...values,
                 [name]:value,
             }
-            
         );
         //console.log(value); Detecta cada que hay un cambio
     }
+    const clean = ()=>{
+        
+        setValue(initialValues);
+        ;
+    }
 
-    return [values,handleChange];
+    //nuevo metodo para borrar
+    
+
+    return [values,handleChange,clean];
 }
 
 export default useForm;

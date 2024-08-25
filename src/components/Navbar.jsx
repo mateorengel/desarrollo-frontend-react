@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import { useSelector} from "react-redux";//recuperar las variables //mostrar
 
 const Navbar =()=>{
+
+    const form=useSelector(state=>state.form);//recupera las variables
+    
     return (
         <nav>
             <ul>
@@ -19,7 +23,10 @@ const Navbar =()=>{
                     <Link to="/forms">Login</Link>
                 </li>
                 <li>
-                    <Link to="/home">Product list</Link>
+                    <Link to="/home">Product List</Link>
+                </li>
+                <li style={{ marginLeft: 'auto' }}> 
+                Bienvenido {form.formData.username}: {form.formData.email}
                 </li>
             </ul>
         </nav>

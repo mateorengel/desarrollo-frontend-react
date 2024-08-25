@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Not Found</title>
     <script>
-      // Redirigir todas las solicitudes al index.html
+      // Redirige la solicitud a la URL actual
       (function() {
-        var baseUrl = window.location.href.split('/').slice(0, -1).join('/');
-        window.location.replace(baseUrl);
+        var path = window.location.pathname;
+        var baseUrl = window.location.origin;
+        var newUrl = baseUrl + path;
+        window.location.replace(newUrl);
       })();
     </script>
   </head>
